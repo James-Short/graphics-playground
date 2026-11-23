@@ -40,13 +40,13 @@ def draw_cube(points):
 points = [
     [-100, 100, 500],
     [100, 100, 500],
-    [100, 100, 100],
-    [-100, 100, 100],
+    [100, 100, 300],
+    [-100, 100, 300],
 
     [-100, -100, 500],
     [100, -100, 500],
-    [100, -100, 100],
-    [-100, -100, 100],
+    [100, -100, 300],
+    [-100, -100, 300],
 ]
 point = [5, 0, 1]
 clock = pygame.time.Clock()
@@ -64,7 +64,7 @@ while run:
     projected_points = []
     for i in range(len(points)):
         projected_points.append(translate_xy(sim_depth(points[i])))
-        points[i] = rotate_y(points[i], (0, 0, 300), 35*dt)
+        points[i] = rotate_y(points[i], (0, 0, 400), 35*dt)
 
     draw_cube(projected_points)
     pygame.display.update()

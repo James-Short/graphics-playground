@@ -1,1 +1,3 @@
 .vscode
+.cpython
+__pycache__
